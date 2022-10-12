@@ -1,0 +1,11 @@
+.portfolio-item-individual {
+  padding: 0 2em 2em;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.portfolio-item-individual p,
+.portfolio-item-individual img {
+  max-width: 600px;
+  margin: 0 auto;
+}

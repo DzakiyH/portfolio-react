@@ -1,21 +1,18 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Dashboard from './pages/Dashboard';
+import PortfolioItem from './pages/PortfolioItem';
 import './App.css';
-import Navbar from './components/Navbar';
-import Introduction from './components/Introduction';
-import MyServices from './components/MyServices';
-import AboutMe from './components/AboutMe';
-import MyWorks from './components/MyWorks';
-import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className='App'>
-      <Navbar />
-      <Introduction />
-      <MyServices />
-      <AboutMe />
-      <MyWorks />
-      <Footer />
-    </div>
+    <>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Dashboard />} />
+          <Route path='/project/:id' element={<PortfolioItem />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
