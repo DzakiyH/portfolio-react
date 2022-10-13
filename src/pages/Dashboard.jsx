@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 const Dashboard = () => {
   return (
     <>
-      <Navbar />
+      <Navbar home={true} />
       <Introduction />
       <MyServices />
       <AboutMe />

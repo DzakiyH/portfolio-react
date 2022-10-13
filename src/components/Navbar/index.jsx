@@ -1,7 +1,9 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../styles/navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ home }) => {
+  const navigation = ['home', 'services', 'about', 'work'];
+
   const toggleNavbar = () => {
     document.body.classList.toggle('nav-open');
   };
@@ -15,35 +17,32 @@ const Navbar = () => {
       <div className='logo'>
         <img src='' alt='logo' />
       </div>
-      <button
-        className='nav-toggle'
-        aria-label='toggle-navigation'
-        onClick={toggleNavbar}
-      >
-        <span className='hamburger'></span>
-      </button>
+      {home ? (
+        <button
+          className='nav-toggle'
+          aria-label='toggle-navigation'
+          onClick={toggleNavbar}
+        >
+          <span className='hamburger'></span>
+        </button>
+      ) : (
+        <Link to='/' className='home-btn'>
+          <i className='fa-sharp fa-solid fa-house home-icon'></i>
+        </Link>
+      )}
       <nav className='nav'>
         <ul className='nav-list'>
-          <li className='nav-item'>
-            <a href='#home' className='nav-link' onClick={linkClicked}>
-              Home
-            </a>
-          </li>
-          <li className='nav-item'>
-            <a href='#services' className='nav-link' onClick={linkClicked}>
-              Services
-            </a>
-          </li>
-          <li className='nav-item'>
-            <a href='#about' className='nav-link' onClick={linkClicked}>
-              About
-            </a>
-          </li>
-          <li className='nav-item'>
-            <a href='#work' className='nav-link' onClick={linkClicked}>
-              Work
-            </a>
-          </li>
+          {navigation.map((section) => (
+            <li className='nav-item'>
+              <a
+                href={`#${section}`}
+                className='nav-link'
+                onClick={linkClicked}
+              >
+                Home
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>

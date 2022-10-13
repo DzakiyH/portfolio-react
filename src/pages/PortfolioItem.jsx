@@ -5,7 +5,7 @@ import ProjectDetails from '../components/ProjectDetails';
 const PortfolioItem = () => {
   return (
     <>
-      <Navbar />
+      <Navbar home={false} />
       <Introduction />
       <ProjectDetails />
     </>

@@ -104,3 +104,9 @@ header {
 .hamburger:after {
   bottom: 6px;
 }
+
+.home-btn {
+  margin-right: 0.5em;
+  font-size: var(--fs-h3);
+  color: var(--clr-accent);
+}
