@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import logo from '../../images/logo_accent.png';
 import '../../styles/navbar.css';
 
 const Navbar = ({ home }) => {
@@ -15,7 +16,7 @@ const Navbar = ({ home }) => {
   return (
     <header>
       <div className='logo'>
-        <img src='' alt='logo' />
+        <img src={logo} alt='logo' />
       </div>
       {home ? (
         <button
