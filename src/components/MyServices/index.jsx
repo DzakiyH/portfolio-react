@@ -6,7 +6,7 @@ const MyServices = () => {
     <section className='my-services' id='services'>
       <h2 className='section-title section-title-services'>What I do</h2>
       <div className='services'>
-        <div class='service'>
+        <div className='service'>
           <h3>Design + Development</h3>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est iure
@@ -15,7 +15,7 @@ const MyServices = () => {
             illo voluptatem culpa perferendis eos!
           </p>
         </div>
-        <div class='service'>
+        <div className='service'>
           <h3>E-Commerce</h3>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -24,7 +24,7 @@ const MyServices = () => {
             temporibus eaque ullam magni.
           </p>
         </div>
-        <div class='service'>
+        <div className='service'>
           <h3>Wordpress</h3>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid

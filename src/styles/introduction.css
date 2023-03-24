@@ -2,9 +2,8 @@
   position: relative;
 }
 
-#tsparticles {
+.particles-gather {
   width: 100%;
-  height: 30vw;
   background-color: var(--clr-light);
 }
 
@@ -28,7 +27,7 @@
     height: 100vh;
   }
 
-  #tsparticles {
+  .particles-gather {
     height: inherit;
   }
 }

@@ -1,6 +1,23 @@
+.about {
+  display: grid;
+}
+
+.about-me,
+.particles-avoid {
+  grid-column: 1;
+}
+
 .about-me {
+  margin: 4em 2em;
   max-width: 1000px;
-  margin: 0 auto;
+  grid-row: 1/2;
+}
+
+.particles-avoid {
+  width: 100%;
+  height: 80vh;
+  background-color: var(--clr-light);
+  grid-row: 1/2;
 }
 
 .about-me-img {
@@ -8,9 +25,17 @@
 }
 
 @media (min-width: 600px) {
+  .about {
+    display: grid;
+    height: fit-content;
+  }
+
   .about-me {
+    max-width: 1000px;
+    margin: 5em auto;
     display: grid;
     grid-template-columns: 1fr 200px;
+    grid-template-rows: repeat(3, 75px);
     grid-template-areas:
       'title img'
       'subtitle img'

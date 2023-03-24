@@ -33,14 +33,14 @@ const Navbar = ({ home }) => {
       )}
       <nav className='nav'>
         <ul className='nav-list'>
-          {navigation.map((section) => (
-            <li className='nav-item'>
+          {navigation.map((section, index) => (
+            <li key={index} className='nav-item'>
               <a
                 href={`#${section}`}
                 className='nav-link'
                 onClick={linkClicked}
               >
-                Home
+                {section}
               </a>
             </li>
           ))}
