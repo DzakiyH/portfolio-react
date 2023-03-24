@@ -34,12 +34,18 @@
 @media (min-width: 800px) {
   .services {
     display: flex;
+    gap: 0 2em;
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .service + .service {
-    margin-left: 2em;
+  .service {
+    flex: 1 1 0px;
+    font-weight: 600;
+  }
+
+  .service p {
+    text-align: justify;
   }
 }
