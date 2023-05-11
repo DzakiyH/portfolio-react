@@ -15,9 +15,11 @@ const Navbar = ({ home }) => {
 
   return (
     <header>
-      <div className='logo'>
-        <img src={logo} alt='logo' />
-      </div>
+      <a href='/'>
+        <div className='logo'>
+          <img src={logo} alt='logo' />
+        </div>
+      </a>
       {home ? (
         <button
           className='nav-toggle'

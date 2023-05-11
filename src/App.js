@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
-import PortfolioItem from './pages/PortfolioItem';
+import Fashionlution from './pages/Fashionlution';
 import './App.css';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<Dashboard />} />
-          <Route path='/project/:id' element={<PortfolioItem />} />
+          <Route path='/project/fashionlution' element={<Fashionlution />} />
         </Routes>
       </Router>
     </>

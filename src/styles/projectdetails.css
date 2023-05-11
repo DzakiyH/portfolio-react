@@ -1,11 +1,13 @@
 .portfolio-item-individual {
-  padding: 0 2em 2em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2em;
   max-width: 1000px;
   margin: 0 auto;
-}
-
-.portfolio-item-individual p,
-.portfolio-item-individual img {
-  max-width: 600px;
-  margin: 0 auto;
+  text-align: justify;
+  border-left: solid 1px var(--clr-accent);
+  border-right: solid 1px var(--clr-accent);
+  background-color: rgba(211, 211, 211, 0.1);
 }

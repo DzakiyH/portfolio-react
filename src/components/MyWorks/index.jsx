@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../styles/myworks.css';
+import fashionlution from '../../images/fashionlution.jpg';
 
 const MyWorks = () => {
   return (
@@ -10,14 +11,9 @@ const MyWorks = () => {
       </p>
 
       <div className='portfolio'>
-        <a href='#' className='portfolio-item'>
-          <img src='' alt='project' className='portfolio-img' />
-        </a>
-        <a href='#' className='portfolio-item'>
-          <img src='' alt='project' className='portfolio-img' />
-        </a>
-        <a href='#' className='portfolio-item'>
-          <img src='' alt='project' className='portfolio-img' />
+        <a href='project/fashionlution' className='portfolio-item'>
+          <img src={fashionlution} alt='project' className='portfolio-img' />
+          <p className='portfolio-name'>Fashionlution</p>
         </a>
       </div>
     </section>

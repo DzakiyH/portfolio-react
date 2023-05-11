@@ -13,6 +13,11 @@
 
 .footer-link {
   font-weight: var(--fw-bold);
+  background-color: transparent;
+  border: none;
+  font-size: inherit;
+  color: inherit;
+  cursor: pointer;
 }
 
 .footer-link:hover,
