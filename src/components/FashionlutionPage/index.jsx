@@ -1,12 +1,12 @@
 import React from 'react';
-import '../../styles/projectdetails.css';
+import '../../styles/fashionlution.css';
 import erd from '../../images/erd_fashionlution.jpeg';
 import fashionHomepage from '../../images/fashionlution_homepage.jpg';
 import fashionShopping from '../../images/fashionlution_shopping.jpg';
 import adminProducts from '../../images/fashionadmin_products.jpg';
 import adminOrders from '../../images/fashionadmin_orders.jpg';
 
-const Fashionlution = () => {
+const FashionlutionPage = () => {
   return (
     <div className='portfolio-item-individual'>
       <h2>Summary</h2>
@@ -60,6 +60,17 @@ const Fashionlution = () => {
           </p>
           <img src={erd} alt='erd' />
         </li>
+        <li className='technology-item'>
+          <h3>Deployment</h3>
+          <p>
+            The entire app is hosted on <a href='https://fly.io/'>fly.io</a>{' '}
+            which is a platform where you can deploy your app with quite
+            affordable prices. fly.io also offers free plan up until certain
+            point which what i'm using for this app. There a lot of services
+            where you can deploy your app but i found that fly.io is quite easy
+            to configure so i chose it.
+          </p>
+        </li>
       </ul>
       <h2>More Details</h2>
       <p>
@@ -108,10 +119,11 @@ const Fashionlution = () => {
       <h2>Addendum</h2>
       <p>
         This app is defintely not perfect, i'm still trying to fix and change
-        some parts to make it a lot better so forgive me for that. You can also
-        send me some suggestion for this app through my socials if you want,
-        that will be really apreciated! Anyway, this has been too long, so i'll
-        list the links to each part and their github's page. Happy shopping!
+        some parts to make it a lot better so please bear with me for that. You
+        can also send me some suggestion for this app through my socials if you
+        want, that will be really apreciated! Anyway, this has been too long, so
+        i'll list the links to each part and their github's page. Happy
+        shopping!
       </p>
       <ul>
         <li>
@@ -188,4 +200,4 @@ const Fashionlution = () => {
   );
 };
 
-export default Fashionlution;
+export default FashionlutionPage;

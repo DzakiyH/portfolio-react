@@ -1,6 +1,6 @@
 import Navbar from '../components/Navbar';
 import WorkIntroduction from '../components/WorkIntroduction';
-import Fashionlution from '../components/Fashionlution';
+import FashionlutionPage from '../components/FashionlutionPage';
 
 const PortfolioItem = () => {
   return (
@@ -10,7 +10,7 @@ const PortfolioItem = () => {
         title='Fashionlution'
         subtitle='A Simple Fashion Marketplace'
       />
-      <Fashionlution />
+      <FashionlutionPage />
     </>
   );
 };

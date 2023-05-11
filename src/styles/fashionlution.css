@@ -1,3 +1,7 @@
+.portfolio-item-individual img {
+  margin: 2em 0;
+}
+
 .portfolio-item-individual {
   position: relative;
   display: flex;
@@ -10,4 +14,8 @@
   border-left: solid 1px var(--clr-accent);
   border-right: solid 1px var(--clr-accent);
   background-color: rgba(211, 211, 211, 0.1);
+}
+
+.technology-item {
+  margin: 1em 0;
 }
