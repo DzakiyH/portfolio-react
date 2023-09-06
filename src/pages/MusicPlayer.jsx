@@ -1,19 +1,19 @@
 import Navbar from '../components/Navbar';
 import WorkIntroduction from '../components/WorkIntroduction';
-import FashionlutionPage from '../components/FashionlutionPage';
+import MusicPlayerPage from '../components/MusicPlayerPage';
 
-import fashionlution from '../images/fashionlution.jpg';
+import musicPlayer from '../images/music-player.jpg';
 
 const PortfolioItem = () => {
   return (
     <>
       <Navbar home={false} />
       <WorkIntroduction
-        title='Fashionlution'
-        subtitle='A Simple Fashion Marketplace'
-        photo={fashionlution}
+        title='Music Player'
+        subtitle='A Simple Music Player'
+        photo={musicPlayer}
       />
-      <FashionlutionPage />
+      <MusicPlayerPage />
     </>
   );
 };

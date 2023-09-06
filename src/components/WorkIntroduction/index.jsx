@@ -1,9 +1,8 @@
 import Tsparticles from '../Tsparticles';
-import photo from '../../images/fashionlution.jpg';
 import { option } from '../../utils/tsparticle';
 import '../../styles/workintroduction.css';
 
-const WorkIntroduction = ({ title, subtitle }) => {
+const WorkIntroduction = ({ title, subtitle, photo }) => {
   return (
     <div className='work-introduction'>
       <Tsparticles cName='particles-gather' particlesOption={option} />

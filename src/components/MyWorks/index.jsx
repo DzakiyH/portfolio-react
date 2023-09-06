@@ -1,6 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import '../../styles/myworks.css';
 import fashionlution from '../../images/fashionlution.jpg';
+import musicPlayer from '../../images/music-player.jpg';
 
 const MyWorks = () => {
   return (
@@ -11,10 +14,14 @@ const MyWorks = () => {
       </p>
 
       <div className='portfolio'>
-        <a href='project/fashionlution' className='portfolio-item'>
+        <Link to='project/fashionlution' className='portfolio-item'>
           <img src={fashionlution} alt='project' className='portfolio-img' />
           <p className='portfolio-name'>Fashionlution</p>
-        </a>
+        </Link>
+        <Link to='project/music-player' className='portfolio-item'>
+          <img src={musicPlayer} alt='project' className='portfolio-img' />
+          <p className='portfolio-name'>Music Player</p>
+        </Link>
       </div>
     </section>
   );
