@@ -1,203 +1,132 @@
 import React from 'react';
 import '../../styles/fashionlution.css';
-import erd from '../../images/erd_fashionlution.jpeg';
-import fashionHomepage from '../../images/fashionlution_homepage.jpg';
-import fashionShopping from '../../images/fashionlution_shopping.jpg';
-import adminProducts from '../../images/fashionadmin_products.jpg';
-import adminOrders from '../../images/fashionadmin_orders.jpg';
+import homepage from '../../images/musicplayer_homepage.jpg';
+import manage from '../../images/musicplayer_manage.jpg';
+import song from '../../images/musicplayer_song.jpg';
 
-const FashionlutionPage = () => {
+const MusicPlayerPage = () => {
   return (
     <div className='portfolio-item-individual'>
       <h2>Summary</h2>
       <p>
-        Fashionlution is a project that i made as a final project in my web
-        developer fullstack bootcamp. It is a web application that serves as a
-        fashion marketplace. It consists of three part: dashboard page which
-        used by customer to browser and order, admin page where the store admin
-        can manage the products and orders received, and the last is the server
-        that provide API to get and manipulate data stored in database. This
-        project is developed mostly using Javacript where React is used for the
-        frontend, NodeJS with Express for the backend, and then postgresql as
-        the database.
+        Music Player is a web-based music player that can receive and save mp3
+        file and then play it from the browser. This project was made in order
+        for me to learn more about building website using Vue. The project is
+        made using Vue 3 with Option API. For the database, i'm using firebase
+        since again, i only focused on Vue in this project.
       </p>
       <h2>Technology</h2>
-      <p>
-        As explained above, this project is made entirely in Javascript, from
-        the frontend to the backend, all is made using javascript. For more
-        details on what package, library, framework, that i use for each part,
-        see details below:
-      </p>
+      <p>The technologies used in this project is listed below:</p>
       <ul className='technology'>
         <li className='technology-item'>
           <h3>Frontend</h3>
           <p>
-            ReactJS is used for the frontend, and most of the styling use
-            bootstrap and bootstrap icon for the icons. This web app need to
-            save some temporary data so react redux is used for the state
-            management.
+            Vue Js is the main technology for this project which use Vue 3 and
+            Option API. Pinia is used for the state management, vue router for
+            the routing, and then vee-validate is used for the form validation
+            since this web has some form in it. This web also has the capability
+            to play music, and howler.js is used to do that.
           </p>
         </li>
         <li className='technology-item'>
           <h3>Backend</h3>
           <p>
-            For the backend, the technology used is ExpressJS for the framework.
-            To handle the authentication, the backend use jsonwebtoken. This
-            project use postgresql for the database, and the ORM used to connect
-            it from the backend is sequelize. The backend also implement some
-            security measure by adding some libraries such as helmet, xss-clean,
-            and express-rate-limit.
+            For the backend, i use Firebase for this project. it's simple, easy
+            to use, and most importantly, it's free. I'm using firestore
+            database to store data, firebase authentication for the
+            authentication, and firebase storage to save the mp3 files.
           </p>
-        </li>
-        <li className='technology-item'>
-          <h3>Database</h3>
-          <p>
-            This app use postgresql as the database. The database contains some
-            data that used for the dashboard. As for the detail of the data, you
-            can see it from the ERD below. As explained before, sequelize is
-            used to connect the backend to this database. the backend also uses
-            sequelize to migrate and seed data into this database.
-          </p>
-          <img src={erd} alt='erd' />
         </li>
         <li className='technology-item'>
           <h3>Deployment</h3>
           <p>
-            The entire app is hosted on <a href='https://fly.io/'>fly.io</a>{' '}
-            which is a platform where you can deploy your app with quite
-            affordable prices. fly.io also offers free plan up until certain
-            point which what i'm using for this app. There a lot of services
-            where you can deploy your app but i found that fly.io is quite easy
-            to configure so i chose it.
+            Since this is quite a simple project which only focused on frontend,
+            i used those simple hosting provider that does everything for you.
+            Which in this case, i'm using Vercel. All i have to do is install
+            Vercel CLI and perform some operation and my website is now
+            deployed! Simple and easy, and it's also free which is amazing.
           </p>
         </li>
       </ul>
       <h2>More Details</h2>
       <p>
-        as explained before, this project/app is an fashion marketplace.
-        essentialy, it is a web that serve to users, the customers that want to
-        buy fashion stuff &#40;clothes, shoes, glasses, etc&#41;. The dashboard
-        page serves as the interface for the customers, and the admin page
-        serves as the interface for the admin. The details for each part will be
-        explained below:
+        As explained before, this is a music player website. A very simple one
+        at that. It can take and store your own music files which only mp3 files
+        for now. And then you and everyone accessing the website can play it
+        from the browser. This website consists of three pages, Homepage, Manage
+        Page, and Music Page.
       </p>
       <ul className='details'>
         <li className='detail-item'>
-          <h3>Dashboard Page</h3>
+          <h3>HomePage</h3>
           <p>
-            dashboard page is the page that the customer will go when they want
-            to buy the products. They will first be meet with the homepage which
-            doesn't really have anything other than some jargons. You can see
-            the homepage in the first image. The real stuff is in the shopping
-            page which you can go by pressing the "Shop Now" button. You will be
-            directed to the shopping page where you can see the stuff that the
-            store sells. You can see the shopping page in the second image.
-            There's still a lot of pages there but it will be too much
-            explanation which may be boring. Please try the web for yourself if
-            you want to find out more! by the way, you need to login to try
-            buying stuff so try registering an account beforehand.
+            The Home page is the landing which will be shown whenever the
+            website is visited for the first time, both logged in or not. It has
+            a simple header with welcome message below the navbar. The navbar at
+            the top has some navigations to use. And then the main content is
+            below the header which contains the list of songs uploaded by others
+            users. You can choose any song to open the song's page where you can
+            play said song and see or post some comments about the song.
           </p>
-          <img src={fashionHomepage} alt='fashion-homepage' />
-          <img src={fashionShopping} alt='fashion-shopping' />
+          <img src={homepage} alt='musicplayer-homepage' />
         </li>
         <li className='detail-item'>
-          <h3>Admin Page</h3>
+          <h3>Manage Page</h3>
           <p>
-            Admin page is where the admin of the store manage products and
-            orders that they received. We can add, edit and remove products that
-            will be displayed in dashboard page. We can also see the list of
-            orders and edit it by giving the receipt code. But the orders
-            function is still incomplete right now and will be fixed in later
-            update. The first image is the products list and the second image is
-            the orders list page. This website also requires login to use, so
-            don't forget to create an account first.
+            Manage page is where the user would manage their songs. This is
+            where you upload your songs into the database. the songs uploaded
+            will then be showed inside this page along with any other songs
+            already uploaded if any. You can also edit the description of the
+            song here and you can also delete a song if you want to.
           </p>
-          <img src={adminProducts} alt='fashion-admin-products' />
-          <img src={adminOrders} alt='fashion-admin-orders' />
+          <img src={manage} alt='musicplayer-manage' />
+        </li>
+        <li className='detail-item'>
+          <h3>Song Page</h3>
+          <p>
+            The song page is where you will end up after choosing any song in
+            the Homepage. This is where you can play the song you choose by
+            clicking the big play button on the top left of the page. At the
+            bottom of the page is the player where you can manage the song
+            currently played like pausing and playing the song at different
+            part. In this page you can see the comments left by users which you
+            can also cotribute.
+          </p>
+          <img src={song} alt='musicplayer-song' />
         </li>
       </ul>
       <h2>Addendum</h2>
       <p>
-        This app is defintely not perfect, i'm still trying to fix and change
-        some parts to make it a lot better so please bear with me for that. You
-        can also send me some suggestion for this app through my socials if you
-        want, that will be really apreciated! Anyway, this has been too long, so
-        i'll list the links to each part and their github's page. Happy
-        shopping!
+        This app is currently at the very early stage of developing. There might
+        be song bugs here and there and i'm still trying to find and fix it.
+        There are also some features that you might expect there but aren't
+        really there, i'm also still developing them. hope that i won't be too
+        lazy to do that. I might also expand this project after i'm done with
+        things mentioned before so that it would be a proper music player. The
+        links for this project can be found below:
       </p>
       <ul>
         <li>
-          Dashboard Page
-          <ul>
-            <li>
-              <a
-                target='_blank'
-                rel='noopener noreferrer'
-                href='https://fashion-client.fly.dev/'
-              >
-                fashionlution
-              </a>
-            </li>
-            <li>
-              <a
-                target='_blank'
-                rel='noopener noreferrer'
-                href='https://github.com/DzakiyH/fashion-client'
-              >
-                github
-              </a>
-            </li>
-          </ul>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://simple-music-player-chi.vercel.app/'
+          >
+            Music Player Web
+          </a>
         </li>
         <li>
-          Admin Page
-          <ul>
-            <li>
-              <a
-                target='_blank'
-                rel='noopener noreferrer'
-                href='https://fashion-server.fly.dev/'
-              >
-                fashion-admin
-              </a>
-            </li>
-            <li>
-              <a
-                target='_blank'
-                rel='noopener noreferrer'
-                href='https://github.com/DzakiyH/fashion-admin'
-              >
-                github
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          Server Page
-          <ul>
-            <li>
-              <a
-                target='_blank'
-                rel='noopener noreferrer'
-                href='https://fashion-server.fly.dev/'
-              >
-                API lists
-              </a>
-            </li>
-            <li>
-              <a
-                target='_blank'
-                rel='noopener noreferrer'
-                href='https://github.com/DzakiyH/fashion-server'
-              >
-                github
-              </a>
-            </li>
-          </ul>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://github.com/DzakiyH/music-player'
+          >
+            github
+          </a>
         </li>
       </ul>
     </div>
   );
 };
 
-export default FashionlutionPage;
+export default MusicPlayerPage;
